@@ -22,3 +22,15 @@ source("rdocs/source/packages.R")
 # de teste depreciados, ou ao menos deixando como comentário. Dê preferência
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
+
+# carregando os dados
+
+excel <- read_xlsx("relatorio_old_town_road.xlsx")
+relatorio_vendas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "relatorio_vendas")
+infos_vendas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_vendas")
+infos_produtos <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_produtos")
+infos_funcionarios <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_funcionarios")
+infos_cidades <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_cidades")
+infos_clientes <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_clientes")
+infos_lojas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_lojas")
+infos_vendas
