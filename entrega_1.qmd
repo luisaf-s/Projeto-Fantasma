@@ -8,17 +8,7 @@ output-file: "Entrega 1"
 source("rdocs/entrega_1.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
 
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
 
 # Objetivo
 
@@ -27,16 +17,16 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 # Análises
 
 ## Análise 1
-
-## Análise 2
-
 ```{r}
 #| label: fig-
 #| fig-cap: "Gráfico "
-
+grafico
 
 
 ```
+## Análise 2
+
+
 
 
 ::: {#quad- layout-align="center" quad-pos="H"}
