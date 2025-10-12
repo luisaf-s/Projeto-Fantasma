@@ -18,12 +18,14 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
 ## Análise 1
 ```{r}
-#| label: fig-
+#| label: fig-grafico
 #| fig-cap: "Gráfico "
 grafico
 
 
 ```
+  A escolha do gráfico de dispersão foi escolhido para analisar melhor duas variáveis numéricas, o ano e a média anual da receita convertida para reais. A partir desse gráfico foi possível observar pouca dispersão dos valores ao longo dos anos sem alguma linearidade indicando que o mercado se manteve equilibrado, sem grandes alterações da receita, logo, não é capaz de estimar os possíveis valores para os próximos anos . Além disso, foi observado que o ano com maior média foi 1880 e com a menor média foram os anos de 1882 e 1887 com médias iguais.  
+  
 ## Análise 2
 
 
