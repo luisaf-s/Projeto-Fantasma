@@ -16,17 +16,19 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
 # Análises
 
-## Análise 1
+## Análise da média das receitas das lojas por ano
+
+  O objetivo da análise é observar a variação das médias das receitas ao longo dos anos de 1880 e 1889. Para isso, foi utilizado um gráfico de linhas univariado, que permite uma visualização melhor do comportamento contínuo das duas variáveis quantitativas: a média das receitas e os anos observados. Além disso, os dados foram agrupados pela data e foi feita a conversão de dólares para reais pela cotação de 5,31.  
 ```{r}
 #| label: fig-grafico
-#| fig-cap: "Gráfico "
+#| fig-cap: "Gráfico de linhas univariado da média da receita das lojas por ano"
 grafico
 
 
 ```
-  A escolha do gráfico de dispersão foi escolhido para analisar melhor duas variáveis numéricas, o ano e a média anual da receita convertida para reais. A partir desse gráfico foi possível observar pouca dispersão dos valores ao longo dos anos sem alguma linearidade indicando que o mercado se manteve equilibrado, sem grandes alterações da receita, logo, não é capaz de estimar os possíveis valores para os próximos anos . Além disso, foi observado que o ano com maior média foi 1880 e com a menor média foram os anos de 1882 e 1887 com médias iguais.  
+   A partir desse gráfico foi possível observar um crescimento dos valores ao longo dos anos, sendo o maior índice de aumento da receita entre os anos de 1888 e 1889, o que pode indicar alguma mudança marcante durante esse período que pode ter ocasionado certo crescimento da média. Além disso, é possível concluir que predomina um crescimento constante sem mudanças drásticas recorrentes.  
   
-## Análise 2
+
 
 
 
