@@ -9,17 +9,6 @@ source("rdocs/entrega_2.R")
 ```
 
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
-
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
 
 # Objetivo
 
@@ -27,19 +16,39 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
 # Análises
 
-## Análise 3
+## Análise 3  
 
-## Análise 4
-
+  O gráfico de dispersão foi escolhido para observar a relação entre duas variáveis quantitativas, que são elas peso(em kg) e altura(em cm) dos clientes. Dessa forma será possível analisar se existe um influência de uma das variáveis sobre a outra.  
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+#| label: fig-grafico_dispersao
+#| fig-cap: "Gráfico de dispersão da relacão entre o peso e a altura"
+grafico_dispersao
 
+```
+  A partir da análise do gráfico, conclui-se uma correlação clara entre as variáveis, pois à medida que uma cresce, a outra também cresce. Dessa forma é possível concluir que, apesar de certa dispersão, o gráfico apresenta uma linearidade clara, mostrando que os clientes que são mais altos pesam mais e vice-versa.  
+  
+## Análise 4  
+
+  O objetivo dessa análise é observar a tendência do peso e da altura dos clientes, para isso foi ultilizado o histograma que mostra a frequência com que cada peso e cada altura aparece diante da coleta dessas informações dos clientes dos clientes.  
+  
+```{r}
+#| label: fig-histograma_peso
+#| fig-cap: "Gráfico histograma da frequência dos pesos observados"
+histograma_peso
 
 
 ```
+  A partir da análise do histograma 1 é possível observar que a maioria dos pesos se concentra entre 60kg e 80kg, sugerindo que os clientes apresentam pesos próximos à média.  
+  
+```{r}
+#| label: fig-histograma_altura
+#| fig-cap: "Gráfico histograma da frequência das alturas observadas"
+histograma_altura
 
 
+```
+  No histograma 2, das alturas, os valores também se concentram próximos à média, sem a presença de valores muito extremos, o que é comum em variáveis desse tipo como peso e altura.  
+  
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
 
