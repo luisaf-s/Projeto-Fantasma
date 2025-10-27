@@ -8,17 +8,6 @@ output-file: "Entrega 3"
 source("rdocs/entrega_3.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
-
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
 
 
 
@@ -29,27 +18,37 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
 # Análises
 
-## Análise 5
-
-## Análise 6
+## Análise da idade dos clientes em Âmbar Seco a depender da loja
+  O objetivo da análise é encontrar os perfis das idades dos clientes para cada loja dessa pequena cidade de Âmbar Seco. Para isso, foi feito um boxplot bivariado, da variável quantitativa discreta idade pela variável qualitativa nominal lojas.
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
-
+#| label: fig-boxplot
+#| fig-cap: "Boxplot da idade pela loja"
+boxplot
 
 
 ```
+  A partir da análise do gráfico foi possível perceber melhor o perfil das idades predominantes dos clientes de cada uma das lojas. Além disso, foi observado que a loja "Vendinha Rápida" possui maior média em comparação com as outras lojas e a loja "Ferraria Seca" apresenta menor média, além de apresentar idades extremas que se afastam bastante da média, assim como na loja "Saloon".
 
 
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
-
-
+    \begin{tabular}{ | l | c | c | c | c | }
+\hline
+\textbf{Estatística} & \textbf{BancoCareca} & \textbf{Ferraria Seca} & \textbf{Saloon} & \textbf{Vendinha Rapida}\\
+\hline
+Média & 35.0 & 34.0 & 35.6 & 39.8\\
+Mediana & 34.0 & 31.0 & 34.0 & 40.0\\
+Quartil 1 & 31.0 & 24.0 & 27.0 & 34.0\\
+Quartil 3 & 40.0 & 39.0 & 39.0 & 44.0\\
+Mínimo & 25.0 & 16.0 & 15.0 & 30.0\\
+Máximo & 44.0 & 80.0 & 77.0 & 49.0\\
+\hline
+\end{tabular}
 
 ```
 
-Medidas resumo da 
+Medidas resumo das lojas 
 :::
 
 
