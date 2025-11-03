@@ -154,8 +154,6 @@ Vale ressaltar que o coeficiente de Pearson é paramétrico e, portanto, sensív
 #| label: fig-grafico_linhas
 #| fig-cap: "Gráfico de linhas univariado da média da receita das lojas por ano"
 grafico_linhas
-
-
 ```
    A partir desse gráfico foi possível observar um crescimento dos valores ao longo dos anos, sendo o maior índice de aumento da receita entre os anos de 1888 e 1889, o que pode indicar alguma mudança marcante durante esse período que pode ter ocasionado certo crescimento da média. Além disso, é possível concluir que predomina um crescimento constante sem mudanças drásticas recorrentes. 
 
@@ -166,14 +164,9 @@ grafico_linhas
 #| label: fig-grafico_dispersao
 #| fig-cap: "Gráfico de dispersão da relacão entre o peso (em quilogramas) e a altura (em centímetros)"
 grafico_dispersao
-
 ```
   A partir da análise do gráfico, observa-se uma correlação clara entre as variáveis, pois à medida que uma cresce, a outra também cresce. Dessa forma é possível concluir que, apesar de certa dispersão, o gráfico apresenta uma linearidade clara, mostrando que os clientes que são mais altos pesam mais e vice-versa. O coeficiente de correlação de Pearson (r = 0,6971) mede o grau e o sentido da relação linear entre as duas variáveis: peso e altura. Esse valor indica uma correlação positiva e forte. Além disso, foi possível observar que a média do peso é 75,2 quilogramas e da altura é de 171 centímetros.
   
-
-  
-  
-::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
 \begin{tabular}{ | l | c | c | }
 \hline
@@ -189,8 +182,6 @@ Variância & 142.0 & 97.4\\
 Desvio Padrão & 11.9 & 9.9\\
 \hline
 \end{tabular}
-
-
 ```
 
 ## Análise da idade dos clientes em Âmbar Seco a depender da loja
@@ -200,10 +191,7 @@ Desvio Padrão & 11.9 & 9.9\\
 #| label: fig-boxplot
 #| fig-cap: "Boxplot da idade pela loja em Âmbar Seco"
 boxplot
-
-
 ```
-::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
 \begin{tabular}{ | l | c | c | c | c | }
 \hline
@@ -217,7 +205,6 @@ Quartil 3 & 40 & 39 & 38 & 46\\
 Máximo & 44 & 80 & 77 & 49\\
 \hline
 \end{tabular}   
-
 ```
   
   
@@ -231,8 +218,6 @@ A partir da análise do gráfico foi possível perceber melhor o perfil das idad
 #| label: fig-grafico_maiores
 #| fig-cap: "Gráfico de colunas do faturamento das 3 lojas com maior receita no ano de 1889"
 grafico_maiores
-
-
 ```
   A partir do gráfico é possível concluir que a loja com maior faturamento foi a Loja Ouro Fino com um total de 197312,50 reais, a segunda loja com maior receita foi a Loja TendTudo com um total de 196340,30 reais e a terceira loja com maior faturamento foi a Ferraria Apache com um total de 181689,10 reais.
   
@@ -244,8 +229,6 @@ grafico_maiores
 #| label: fig-grafico_ourofino
 #| fig-cap: "Gráfico de colunas dos 3 produtos mais vendidos na Loja Ouro Fino "
 grafico_ourofino
-
-
 ```
   A partir do gráfico conclui-se que o produto mais vendido foram Botas de Couro, tendo sido vendidas 52 pares e o produto menos vendido entre os 3 foi o Chápeu de Couro, sendo vendidas 49 unidades.
 
@@ -258,8 +241,6 @@ grafico_ourofino
 #| label: fig-grafico_tendtudo
 #| fig-cap: "Gráfico de colunas dos 3 produtos mais vendidos na Loja TendTudo"
 grafico_tendtudo
-
-
 ```
   A partir do gráfico conclui-se que o produto mais vendido da Loja TendTudo foi a Espingarda, com 53 unidades e o produto manos vendido foi a Col.45, com 43 unidades.
 
@@ -271,8 +252,6 @@ grafico_tendtudo
 #| label: fig-grafico_ferraria
 #| fig-cap: "Gráfico de colunas dos 4 produtos mais vendidos na Ferraria Apache"
 grafico_ferraria
-
-
 ```
   A partir da análise conclui-se que o produto mais vendido foi o Chápeu de Couro com 52 unidades e empatados em terceiro lugar ficaram o Machado e o Whisky com 41 unidades.
 
