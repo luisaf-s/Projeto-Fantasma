@@ -16,54 +16,47 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
 # Análises
 
-## Análise 3  
+## Análise da relação entre o peso e a altura dos clientes  
 
-  O gráfico de dispersão foi escolhido para observar a relação entre duas variáveis quantitativas, que são elas peso(em kg) e altura(em cm) dos clientes. Dessa forma será possível analisar se existe um influência de uma das variáveis sobre a outra.  
+  O objetivo da análise é observar a relação entre as variáveis quantitativas contínuas peso e altura dos clientes. Para isso, foram analisados 1990 clientes. Além disso, para melhor compreensão dos valores a unidade de medida do peso foi alterada de libras para quilogramas e a unidade de medida da altura foi alterada de decímetros para centímetros. O gráfico de dispersão foi escolhido para melhor observação da relação entre essas duas variáveis .   
 ```{r}
 #| label: fig-grafico_dispersao
-#| fig-cap: "Gráfico de dispersão da relacão entre o peso e a altura"
+#| fig-cap: "Gráfico de dispersão da relacão entre o peso (em quilogramas) e a altura (em centímetros)"
 grafico_dispersao
 
 ```
-  A partir da análise do gráfico, conclui-se uma correlação clara entre as variáveis, pois à medida que uma cresce, a outra também cresce. Dessa forma é possível concluir que, apesar de certa dispersão, o gráfico apresenta uma linearidade clara, mostrando que os clientes que são mais altos pesam mais e vice-versa.  
+  A partir da análise do gráfico, observa-se uma correlação clara entre as variáveis, pois à medida que uma cresce, a outra também cresce. Dessa forma é possível concluir que, apesar de certa dispersão, o gráfico apresenta uma linearidade clara, mostrando que os clientes que são mais altos pesam mais e vice-versa. O coeficiente de correlação de Pearson (r = 0,6971) mede o grau e o sentido da relação linear entre as duas variáveis: peso e altura. Esse valor indica uma correlação positiva e forte. Além disso, foi possível observar que a média do peso é 75,2 quilogramas e da altura é de 171 centímetros.
   
-## Análise 4  
 
-  O objetivo dessa análise é observar a tendência do peso e da altura dos clientes, para isso foi ultilizado o histograma que mostra a frequência com que cada peso e cada altura aparece diante da coleta dessas informações dos clientes dos clientes.  
   
-```{r}
-#| label: fig-histograma_peso
-#| fig-cap: "Gráfico histograma da frequência dos pesos observados"
-histograma_peso
-
-
-```
-  A partir da análise do histograma 1 é possível observar que a maioria dos pesos se concentra entre 60kg e 80kg, sugerindo que os clientes apresentam pesos próximos à média.  
-  
-```{r}
-#| label: fig-histograma_altura
-#| fig-cap: "Gráfico histograma da frequência das alturas observadas"
-histograma_altura
-
-
-```
-  No histograma 2, das alturas, os valores também se concentram próximos à média, sem a presença de valores muito extremos, o que é comum em variáveis desse tipo como peso e altura.  
   
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
-
+\begin{tabular}{ | l | c | c | }
+\hline
+\textbf{Estatísticas} & \textbf{Peso} & \textbf{Altura} \\
+\hline
+Q1 & 66.9 & 165.0\\
+Mediana & 75.3 & 172.0\\
+Q3 & 83.2 & 178.0\\
+Maxímo & 119.0 & 200.0\\
+Media & 75.2 & 171.0\\
+Mínimo & 45.0 & 150.0\\
+Variância & 142.0 & 97.4\\
+Desvio Padrão & 11.9 & 9.9\\
+\hline
+\end{tabular}
 
 
 ```
 
-Medidas resumo da 
+Medidas resumo do peso (em quilogramas) e da altura (em centímetros)
 :::
 
 
 
 ::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
 ```{=latex}
-
 
 ```
 

@@ -20,9 +20,9 @@ Esse template foi criado para o alocado conseguir observar como ficaria sua aná
 
   O objetivo da análise é observar a variação das médias das receitas ao longo dos anos de 1880 e 1889. Para isso, foi utilizado um gráfico de linhas univariado, que permite uma visualização melhor do comportamento contínuo das duas variáveis quantitativas: a média das receitas e os anos observados. Além disso, os dados foram agrupados pela data e foi feita a conversão de dólares para reais pela cotação de 5,31.  
 ```{r}
-#| label: fig-grafico
+#| label: fig-grafico_linhas
 #| fig-cap: "Gráfico de linhas univariado da média da receita das lojas por ano"
-grafico
+grafico_linhas
 
 
 ```

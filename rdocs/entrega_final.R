@@ -23,57 +23,54 @@ source("rdocs/source/packages.R")
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
 
-# carregando os dados
-
-excel <- read_xlsx("relatorio_old_town_road.xlsx")
-relatorio_vendas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "relatorio_vendas")
 infos_vendas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_vendas")
 infos_produtos <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_produtos")
 infos_funcionarios <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_funcionarios")
 infos_cidades <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_cidades")
 infos_clientes <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_clientes")
 infos_lojas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "infos_lojas")
-infos_vendas
-
-# juntar as tabelas das variáveis
-
-infos_vendas <- infos_vendas %>% 
-  rename(SaleID = Sal3ID)
-infos_vendas
-infos_produtos <- infos_produtos %>%
-  rename(ItemID = Ite3ID)
-infos_produtos
-infos_lojas <- infos_lojas %>%
+infos_cidades <- infos_cidades %>%
+  rename(CityID = C1tyID)
+infos_clientes <- infos_clientes %>%
+  rename(ClientID = Cli3ntID)
+infos_cidades
+relatorio_vendas <- read_xlsx("relatorio_old_town_road.xlsx", sheet = "relatorio_vendas")
+relatorio_final <- inner_join(infos_cidades, infos_lojas, by = "CityID") 
+relatorio_final <- relatorio_final %>%
   rename(StoreID = Stor3ID)
-infos_lojas
+relatorio_final <- inner_join(relatorio_final, relatorio_vendas, by = "StoreID")
+relatorio_final <- inner_join(relatorio_final, infos_clientes, by = "ClientID")
+relatorio_final
+cidade <- relatorio_final %>%
+  filter(NameCity == "Âmbar Seco")
 
-vendas_completo <- left_join(relatorio_vendas, infos_vendas, by = "SaleID")
-vendas_completo <- left_join(vendas_completo, infos_produtos, by = "ItemID")
-vendas_completo <- left_join(vendas_completo,infos_lojas, by = "StoreID")
-vendas_completo
-
-vendas_ano <- vendas_completo %>%
-  mutate(Date = year(Date)) 
-  
-real <- vendas_ano %>%
-  group_by(Date) %>%
-  reframe(PreçoTotal = ((UnityPrice * Quantity)*5.31)) 
-
-media_por_ano <- real %>%
-  group_by(Date) %>%
-  summarise(media_real = sum(PreçoTotal)/18)
-
-grafico_linhas <- ggplot(media_por_ano) +
-  aes(x=Date, y=media_real, group=1) +
-  geom_line(size=1,colour="#A11D21") + geom_point(colour="#A11D21",
-                                                  size=2) +
-  labs(x="Ano", y="Média") +
-  scale_x_continuous(breaks = 1880:1889, limits = c(1880,1889))
+boxplot <- ggplot(cidade) +
+  aes(x = reorder(NameStore, Age, FUN = median), y = Age) +
+  geom_boxplot(fill = c("#A11D21"), width = 0.5) +
+  stat_summary(
+    fun = "mean", geom = "point", shape = 23, size = 3, fill = "white"
+  ) +
+  labs(x = "Loja", y = "Idade dos clientes") +
   theme_estat()
-ggsave("series_uni.pdf", width = 158, height = 93, units = "mm")
-
-grafico_linhas
-
+ggsave("box_bi.pdf", width = 158, height = 93, units = "mm")
+boxplot
 
 
-  
+resumo_idade <- cidade %>%
+  distinct(ClientID, .keep_all = T) %>%
+  group_by(NameStore) %>%
+  summarise(
+    clientes = n(),
+    media = mean(Age, na.rm = TRUE),
+    mediana = median(Age, na.rm = TRUE),
+    Q1 = quantile(Age, 0.25, na.rm = TRUE),
+    Q3 = quantile(Age, 0.75, na.rm = TRUE),
+    min = min(Age, na.rm = TRUE),
+    max = max(Age, na.rm = TRUE),
+    variancia = var(Age, na.rm = TRUE),
+    desvio_padrao = sd(Age, na.rm = TRUE)
+  )
+
+resumo_idade
+
+
