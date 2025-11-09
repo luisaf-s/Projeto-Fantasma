@@ -250,7 +250,7 @@ Quadro de medidas resumo das idades dos clientes das 4 lojas
 
 ## Análise das 3 lojas com maior receita no ano de 1889
 
-  O objetivo dessa análise é saber quais são as 3 lojas que tiveram a maior receita no ano de 1889. Para isso, foi utilizado um gráfico de colunas que permite analisar o faturamento de cada uma das 3 lojas com maior receita no ano de 1889, além de ser possível observar qual teve a maior receita e a menor.
+  O objetivo dessa análise é saber quaiss são as 3 lojas que tiveram a maior receita no ano de 1889. Para isso, foi utilizado um gráfico de colunas que permite analisar o faturamento de cada uma das 3 lojas com maior receita no ano de 1889, além de ser possível observar qual teve a maior receita e a menor.
 
 ```{r}
 #| label: fig-grafico_maiores
