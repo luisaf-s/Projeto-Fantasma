@@ -11,11 +11,11 @@ source("rdocs/entrega_3.R")
 ```
 
 # Introdução
-  O relatório tem como objetivo realizar uma análise estatística exploratória a partir do conjunto de dados disponibilizado pela empresa Old Town Road, que contém informações sobre vendas, clientes, lojas e produtos de uma pequena cidade chamada Âmbar Seco. A proposta é compreender o comportamento e as relações entre diferentes variáveis, por meio de gráficos e medidas resumo, possibilitando uma visão mais ampla do desempenho das lojas e do perfil de seus clientes ao longo do tempo.
-
+  O relatório tem como objetivo realizar uma análise estatística exploratória a partir do conjunto de dados disponibilizado pela empresa Old Town Road, que contém informações sobre vendas, clientes, lojas e produtos de uma pequena cidade chamada Âmbar Seco. A proposta é compreender o comportamento e as relações entre diferentes variáveis, por meio de gráficos e medidas resumo, possibilitando uma visão mais ampla do desempenho das lojas e do perfil de seus clientes ao longo do tempo.  
+  
   Inicialmente, será analisada a receita média das lojas no período de 1880 e 1889, para compreender o comportamento do faturamento ao longo do tempo. Em seguida, será observada a relação entre peso e altura dos clientes para melhor entendimento do perfil dos consumidores. Além disso, busca-se investigar também o perfil etário dos clientes para cada loja de Âmbar Seco. Por fim, será feita uma análise das três lojas com maior receita total no ano de 1889, com o intuito de identificar quais estabelecimentos apresentaram o melhor desempenho comercial no período e dos três produtos mais vendidos em cada uma dessas lojas. 
-
-  Para cada uma dessas análises foi utilizado o R,uma linguagem de programação e ambiente de software open source para computação estatística, análise e visualização de dados e o RStudio na versão 4.4.3, que é um ambiente de desenvolvimento integrado (IDE) gratuito e de código aberto para a linguagem de programação estatística R. Ele facilita a análise e visualização de dados, oferecendo uma interface mais amigável e recursos que tornam o uso do R mais acessível.
+  
+  Para cada uma dessas análises foi utilizado o R,uma linguagem de programação e ambiente de software open source para computação estatística, análise e visualização de dados e o RStudio na versão 4.4.3, que é um ambiente de desenvolvimento integrado (IDE) gratuito e de código aberto para a linguagem de programação estatística R. Ele facilita a análise e visualização de dados, oferecendo uma interface mais amigável e recursos que tornam o uso do R mais acessível.  
 
 # Referencial Teórico
 
@@ -243,40 +243,42 @@ Quadro de medidas resumo das idades dos clientes das 4 lojas
 :::
 
 
-  A partir da análise do gráfico $\ref{fig-boxplot}$ e do quadro [**Quadro** @quad-idades] é possível observar que a loja Ferraria Seca apresenta maior concentração das idades entre 24 e 39 anos. Além disso, tendo a menor mediana em comparação com as outras lojas com 30,50 e apresenta o maior número de outliers, com sua idade mais alta sendo 80 anos.  
-  A segunda loja, Banco Careca, não apresenta uma grande variação entre as idades, que estão em torno de 25 e 44 anos sem a presença de outlier, ou seja, valores extremos que fogem do padrão com mediana 34.  
-  Em seguida, a loja Saloon com mediana 32,50 apresenta outliers com sua idade máxima sendo 77 e sua idade mínima sendo 15, o que mostra uma grande variedade na faixa etária dos clientes dessa loja.  
-  Por fim, a loja Vendinha Rápida apresenta a maior mediana entre as quatro com 41 anos e não apresenta também grande dispersão nos valores, sendo seu máximo 49 anos e o mínimo 30.  
+  A partir da análise do gráfico $\ref{fig-boxplot}$ e do quadro [**Quadro** @quad-idades] é possível observar que a loja Ferraria Seca apresenta maior concentração das idades entre 24 e 39 anos. Além disso, tendo a menor mediana em comparação com as outras lojas com 30,50 e apresenta o maior número de outliers, com sua idade mais alta sendo 80 anos.
+  
+  A segunda loja, Banco Careca, não apresenta uma grande variação entre as idades, que estão em torno de 25 e 44 anos sem a presença de outlier, ou seja, valores extremos que fogem do padrão com mediana 34.
+  
+  Em seguida, a loja Saloon com mediana 32,50 apresenta outliers com sua idade máxima sendo 77 e sua idade mínima sendo 15, o que mostra uma grande variedade na faixa etária dos clientes dessa loja. 
+  
+  Por fim, a loja Vendinha Rápida apresenta a maior mediana entre as quatro com 41 anos e não apresenta também grande dispersão nos valores, sendo seu máximo 49 anos e o mínimo 30.    
 
-## Análise das 3 lojas com maior receita no ano de 1889
+## Análise das 3 lojas com maior receita no ano de 1889 e dos 3 produtos mais vendidos em cada uma das lojas
 
-  O objetivo dessa análise é saber quaiss são as 3 lojas que tiveram a maior receita no ano de 1889. Para isso, foi utilizado um gráfico de colunas que permite analisar o faturamento de cada uma das 3 lojas com maior receita no ano de 1889, além de ser possível observar qual teve a maior receita e a menor.
+  O objetivo dessa análise é saber quais são as 3 lojas que tiveram a maior receita no ano de 1889. Para isso, foi utilizado um gráfico de colunas que permite analisar o faturamento de cada uma das 3 lojas com maior receita no ano de 1889, além de ser possível observar qual teve a maior receita e a menor.
+  
+  Além disso, foi observada a quantidade vendida de cada um dos produtos mais vendidos das três lojas com maior faturamento no ano de 1889. Para isso, foi utilizado um gráfico de colunas bivariado que permite observar cada um dos produtos separadamente.  
 
 ```{r}
 #| label: fig-grafico_maiores
 #| fig-cap: "Gráfico de colunas do faturamento das 3 lojas com maior receita no ano de 1889"
 grafico_maiores
 ```
-  A partir do gráfico $\ref{fig-grafico_maiores}$ é possível concluir que a loja com maior faturamento foi a Loja Ouro Fino com um total de 197.312,50 reais, a segunda loja com maior receita foi a Loja TendTudo com um total de 196.340,30 reais e a terceira loja com maior faturamento foi a Ferraria Apache com um total de 181.689,10 reais.
-  
-## Análise das quantidades dos 3 produtos mais vendidos na Loja Ouro Fino
-
-  O objetivo dessa análise é saber a quantidade de cada um dos produtos mais vendidos das três lojas com maior faturamento no ano de 1889. Para isso, foi utilizado um gráfico de colunas bivariado que permite observar cada um dos produtos separadamente.
 
 ```{r}
 #| label: fig-colunas_bivariado
 #| fig-cap: "Gráfico de colunas da doa 3 produtos mais vendidos nas 3 lojas com maior faturamento"
 colunas_bivariado
 ```
-  A partir do gráfico $\ref{fig-colunas_bivariado}$ conclui-se que o produto mais vendido da loja Ouro Fino foram Botas de Couro, tendo sido vendidas 52 pares e o produto menos vendido entre os 3 foi o Chápeu de Couro, sendo vendidas 49 unidades. Além disso, o produto mais vendido da Loja TendTudo foi a Espingarda, com 53 unidades e o produto menos vendido foi a Col.45, com 43 unidades. Por fim, o produto mais vendido da loja Ferraria Apache foi o Chápeu de Couro com 52 unidades e empatados em terceiro lugar ficaram o Machado e o Whisky com 41 unidades.
+  A partir do gráfico $\ref{fig-grafico_maiores}$ é possível concluir que a loja com maior faturamento foi a Loja Ouro Fino com um total de 197.312,50 reais, a segunda loja com maior receita foi a Loja TendTudo com um total de 196.340,30 reais e a terceira loja com maior faturamento foi a Ferraria Apache com um total de 181.689,10 reais.  
+  
+  Com a análise do gráfico $\ref{fig-colunas_bivariado}$ conclui-se que o produto mais vendido da loja Ouro Fino foram Botas de Couro, tendo sido vendidas 52 pares e o produto menos vendido entre os 3 foi o Chápeu de Couro, sendo vendidas 49 unidades. Além disso, o produto mais vendido da Loja TendTudo foi a Espingarda, com 53 unidades e o produto menos vendido foi a Col.45, com 43 unidades. Por fim, o produto mais vendido da loja Ferraria Apache foi o Chápeu de Couro com 52 unidades e empatados em terceiro lugar ficaram o Machado e o Whisky com 41 unidades.  
 
 # Conclusões
-A partir das análises realizadas, foi possível compreender melhor o comportamento das variáveis e os padrões das lojas de Âmbar Seco. Observou-se um crescimento constante na receita média entre 1880 e 1889, com destaque para o aumento mais expressivo entre 1888 e 1889, indicando um período de expansão econômica.
-
-Na relação entre peso e altura dos clientes, verificou-se uma correlação positiva e forte (r = 0,6971), mostrando que clientes mais altos tendem a pesar mais. As médias de 75,2 kg e 171 cm reforçam essa relação linear observada no gráfico de dispersão.
-
-Em relação ao perfil etário por loja, percebeu-se que a Vendinha Rápida apresenta a maior média de idade, enquanto a Ferraria Seca possui a menor, além de idades mais dispersas.
-
-Entre as lojas com maior receita, destacaram-se a Ouro Fino, a TendTudo e a Ferraria Apache, com faturamentos próximos, mas liderados pela primeira. Já entre os produtos mais vendidos, o Chapéu de Couro foi o principal destaque, seguido das Botas de Couro e da Espingarda.
-
-De forma geral, os resultados indicam um mercado em crescimento estável, com diferenças marcantes entre as lojas e padrões de consumo que podem orientar futuras estratégias comerciais.
+  A partir das análises realizadas, foi possível compreender melhor o comportamento das variáveis e os padrões das lojas de Âmbar Seco. Observou-se um crescimento constante na receita média entre 1880 e 1889, com destaque para o aumento mais expressivo entre 1888 e 1889, indicando um período de expansão econômica. 
+  
+  Na relação entre peso e altura dos clientes, verificou-se uma correlação positiva e forte (r = 0,6971), mostrando que clientes mais altos tendem a pesar mais. As médias de 75,2 kg e 171 cm reforçam essa relação linear observada no gráfico de dispersão. 
+  
+  Em relação ao perfil etário por loja, percebeu-se que a Vendinha Rápida apresenta a maior média de idade, enquanto a Ferraria Seca possui a menor, além de idades mais dispersas. 
+  
+  Entre as lojas com maior receita, destacaram-se a Ouro Fino, a TendTudo e a Ferraria Apache, com faturamentos próximos, mas liderados pela primeira. Já entre os produtos mais vendidos, o Chapéu de Couro foi o principal destaque, seguido das Botas de Couro e da Espingarda. 
+  
+  De forma geral, os resultados indicam um mercado em crescimento estável, com diferenças marcantes entre as lojas e padrões de consumo que podem orientar futuras estratégias comerciais e ajudam a compreender o comportamento do mercado e prever ideias futuras.  
